@@ -1715,8 +1715,8 @@
                                 }
                                 http = null;
                             };
-                            http.responseType = 'arraybuffer';
                             http.open('GET', img.src, true);
+                            http.responseType = 'arraybuffer';
                             try {
                                 http.send(null);
                             } catch (e) {}
@@ -3415,7 +3415,7 @@
             /* canvas-toBlob.js
              * A canvas.toBlob() implementation.
              * 2013-12-27
-             * 
+             *
              * By Eli Grey, http://eligrey.com and Devin Samarin, https://github.com/eboyjr
              * License: X11/MIT
              *   See https://github.com/eligrey/canvas-toBlob.js/blob/master/LICENSE.md
