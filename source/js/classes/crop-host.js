@@ -1,6 +1,8 @@
 'use strict';
 
 crop.factory('cropHost', ['$document', '$q', 'cropAreaCircle', 'cropAreaSquare', 'cropAreaRectangle', 'cropEXIF', function ($document, $q, CropAreaCircle, CropAreaSquare, CropAreaRectangle, cropEXIF) {
+    var colorPaletteLength = 8;
+
     /* STATIC FUNCTIONS */
 
     // Get Element's Offset
@@ -18,8 +20,6 @@ crop.factory('cropHost', ['$document', '$q', 'cropAreaCircle', 'cropAreaSquare',
 
         var top = box.top + scrollTop - clientTop;
         var left = box.left + scrollLeft - clientLeft;
-
-        var colorPaletteLength = 8;
 
         return {
             top: Math.round(top),
